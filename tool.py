@@ -2,9 +2,9 @@ import sys, platform
 
 class OSRouter:
     def __init__(self):
-        plat = "".join(platform.linux_distribution()).replace(' ', '_')
-        for n in range(len(plat)):
-            p = plat[:-n]
+        self.platform = "".join(platform.linux_distribution()).replace(' ', '_')
+        for n in range(len(self.platform)):
+            p = self.platform[:-n]
             op = getattr(self, p, None)
             if op:
                 #print 'Matched {0}'.format(p)

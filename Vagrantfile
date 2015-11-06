@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "Ubuntu14", autostart: true do |m0|
     m0.vm.box = "default-machine"
-    m0.vm.box = "ubuntu/trusty64 "
+    m0.vm.box = "ubuntu/trusty64"
     m0.vm.network "private_network", ip: "192.168.33.12"
 
     m0.vm.provider "virtualbox" do |vb|
