@@ -1,6 +1,6 @@
 import sys, platform
 
-class OSRouter:
+class CallRouter:
     def __init__(self):
         self.platform = "".join(platform.linux_distribution()).replace(' ', '_')
         for n in range(len(self.platform)):
@@ -12,7 +12,7 @@ class OSRouter:
         else: return self.default()
 
 
-class Router(OSRouter):
+class Router(CallRouter):
     def default(self):
         print 'Don\'t know what to do, exiting'
         sys.exit(1)

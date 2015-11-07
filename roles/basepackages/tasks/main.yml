@@ -1,0 +1,28 @@
+---
+
+- name: Required ansible dependencies installed
+  yum: name={{ item }} state=installed
+  with_items:
+    - libselinux-python
+  when: ansible_os_family == "RedHat"
+
+- name: Fedora EPEL Repo is available
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo force=no
+  when: ansible_os_family == "RedHat"
+
+- name: There is a GPG key for EPEL
+  copy: src=RPM-GPG-KEY-EPEL-7 dest=/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 force=no
+  when: ansible_os_family == "RedHat"
+
+- name: install pip for RedHat based
+  yum: name=python-pip
+  when: ansible_os_family == "RedHat"
+
+- name: install pip for Suse based
+  zypper: name=python-pip
+  when: ansible_os_family == "Suse"
+
+- name: install pip for Ubuntu based
+  apt: name=python-pip
+  when: ansible_os_family == "Debian"
+

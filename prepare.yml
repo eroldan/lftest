@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  sudo: yes
+
+  roles:
+    - basepackages
+
+  tasks:
+
+    - name: install pip shell.py
+      pip: name=shell.py state=present

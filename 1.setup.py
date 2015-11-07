@@ -1,4 +1,6 @@
 #!/bin/env python
+# Story:
+# Alter the projectmanager user account changing its default login shell from /bin/false to /bin/bash.
 
 from shell import ex
 from tool import *
