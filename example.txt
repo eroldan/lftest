@@ -1,0 +1,90 @@
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.setup.py" 
+ubuntu | success | rc=0 >>
+
+
+opensuse | success | rc=0 >>
+
+
+centos | success | rc=0 >>
+
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.grading.py" 
+ubuntu | FAILED | rc=33 >>
+Item Failed
+
+centos | FAILED | rc=33 >>
+Item Failed
+
+opensuse | FAILED | rc=33 >>
+Item Failed
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.answer.py" 
+ubuntu | success | rc=0 >>
+
+
+opensuse | success | rc=0 >>
+
+
+centos | success | rc=0 >>
+
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.grading.py" 
+ubuntu | success | rc=0 >>
+Item passed
+
+opensuse | success | rc=0 >>
+Item passed
+
+centos | success | rc=0 >>
+Item passed
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.setup.py" 
+ubuntu | success | rc=0 >>
+
+
+opensuse | success | rc=0 >>
+
+
+centos | success | rc=0 >>
+
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.grading.py" 
+ubuntu | FAILED | rc=33 >>
+Item Failed
+
+opensuse | FAILED | rc=33 >>
+Item Failed
+
+centos | FAILED | rc=33 >>
+Item Failed
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.ansewer.py" 
+ubuntu | FAILED | rc=2 >>
+python: can't open file '/vagrant/2.ansewer.py': [Errno 2] No such file or directory
+
+opensuse | FAILED | rc=2 >>
+python: can't open file '/vagrant/2.ansewer.py': [Errno 2] No such file or directory
+
+centos | FAILED | rc=2 >>
+python: can't open file '/vagrant/2.ansewer.py': [Errno 2] No such file or directory
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.answer.py" 
+ubuntu | success | rc=0 >>
+
+
+opensuse | success | rc=0 >>
+
+
+centos | success | rc=0 >>
+
+
+[eroldan@lxfast lf]$ ./test.sh "python /vagrant/2.grading.py" 
+ubuntu | success | rc=0 >>
+Item passed
+
+opensuse | success | rc=0 >>
+Item passed
+
+centos | success | rc=0 >>
+Item passed
+
