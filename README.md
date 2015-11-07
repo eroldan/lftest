@@ -1,4 +1,4 @@
-# Links
+# Story
 
 * https://www.toptal.com/uploads/note/attachment/181548/Linux_Foundation_-_Linux_Systems_Programmer.html
 
@@ -6,8 +6,16 @@
 
 ```
 pip install shell.py
+pip install ansible
 ```
 
-# Questions
+# Setup test environment
 
-* Unit testing?
+```
+vagrant up
+./prepare.sh # this runs ansible and install few deps on test systems
+```
+
+# Test items
+Check example.log
+
