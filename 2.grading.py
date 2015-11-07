@@ -7,7 +7,7 @@ from tool import *
 
 
 class Run(Router):
-    def common(self):
+    def check(self):
 
         if self.platform.startswith('Ubuntu'): sysctl = '/sbin/sysctl'
         else: sysctl = '/usr/sbin/sysctl'
@@ -18,5 +18,16 @@ class Run(Router):
         if v != '131070':
             fail()
         else: success()
+
+
+    def common(self):
+        assert ex('systemctl stop systemd-sysctl.service').re() == 0
+        assert ex('systemctl start systemd-sysctl.service').re() == 0
+        self.check()
+
+
+    def Ubuntu(self):
+        assert ex('start procps').re() == 0
+        self.check()
 
 Run()
