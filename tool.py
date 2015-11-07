@@ -15,7 +15,7 @@ class CallRouter:
 class Router(CallRouter):
     def default(self):
         print 'Don\'t know what to do, exiting'
-        sys.exit(1)
+        sys.exit(100)
 
     def common(self):
         print 'This is a nice LSB OS'
@@ -27,7 +27,7 @@ class Router(CallRouter):
     def Ubuntu(self):
         self.common()
 
-    def OpenSuse(self):
+    def openSUSE(self):
         self.common()
 
 
