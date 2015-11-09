@@ -13,6 +13,7 @@ pip install ansible
 
 ```
 vagrant up
+./vagrant-copy-key.sh # install *your* ssh public key to the vagrant vms
 ./prepare.sh # this runs ansible and install few deps on test systems
 ```
 
